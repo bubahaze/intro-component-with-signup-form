@@ -1,0 +1,91 @@
+//Variables
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url("../images/bg-intro-desktop.png"), linear-gradient(rgb(248, 124, 110), salmon);
+    background-size: cover;
+    //opacity: 70%;
+    background-blend-mode: multiply;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    //centering a div has never been easier! Look below:
+    display: grid;
+    //OR JUSTIFY-CONTENT: CENTER AND ALIGN-CONTENT: CENTER INSTEAD OF PLACE-ITEMS
+    place-items: center;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    width: 70%;
+    max-width: 90vw;
+    border: 2px solid blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em 0 1em;
+    margin: auto;
+    flex-basis: 45%;
+}
+
+.form-container {
+    //display: flex;
+    //flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    border-radius: 7px;
+}
+
+.title {
+    color: white;
+    //padding: 10em 3em;
+    margin: 10em 2em;
+    //width: 50%;
+    flex-basis: 45%;
+    h1 {
+        font-size: 3.7rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.top-offer {
+    font-size: 1.2rem;
+    background-color: $blue;
+    padding: 1em;
+    margin-bottom: 1.3em;
+    border-radius: 7px;
+}
+
+input {
+    display: block;
+    margin: 1em;
+}
+
+.attribution {
+    display: none;
+}

@@ -1,0 +1,103 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url("../images/bg-intro-desktop.png"), -webkit-gradient(linear, left top, left bottom, from(#f87c6e), to(salmon));
+  background-image: url("../images/bg-intro-desktop.png"), linear-gradient(#f87c6e, salmon);
+  background-size: cover;
+  background-blend-mode: multiply;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 70%;
+  max-width: 90vw;
+  border: 2px solid blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1em 0 1em;
+  margin: auto;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.form-container {
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 2em;
+  border-radius: 7px;
+}
+
+.title {
+  color: white;
+  margin: 10em 2em;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.title h1 {
+  font-size: 3.7rem;
+}
+
+.title p {
+  font-size: 1.2rem;
+}
+
+.top-offer {
+  font-size: 1.2rem;
+  background-color: #6055a5;
+  padding: 1em;
+  margin-bottom: 1.3em;
+  border-radius: 7px;
+}
+
+input {
+  display: block;
+  margin: 1em;
+}
+
+.attribution {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
