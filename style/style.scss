@@ -19,7 +19,7 @@ body {
     background-size: cover;
     //opacity: 70%;
     background-blend-mode: multiply;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     height: 100vh;
     width: 100vw;
     //centering a div has never been easier! Look below:
@@ -27,6 +27,14 @@ body {
     //OR JUSTIFY-CONTENT: CENTER AND ALIGN-CONTENT: CENTER INSTEAD OF PLACE-ITEMS
     place-items: center;
     overflow: hidden;
+    color: white;
+}
+
+.form-container,
+.top-offer,
+input,
+button {
+    border-radius: 5px;
 }
 
 .main-container {
@@ -35,16 +43,17 @@ body {
     //flex-wrap: wrap;
     width: 70%;
     max-width: 90vw;
-    border: 2px solid blue;
+    //border: 2px solid blue;
     justify-content: center;
     align-items: center;
+    margin-top: 5em;
 }
 
 .left-container {
     display: flex;
     flex-direction: column;
-    padding: 0 1em 0 1em;
-    margin: auto;
+    padding: 2em 1em;
+    //margin: auto;
     flex-basis: 45%;
 }
 
@@ -55,14 +64,26 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2em;
-    border-radius: 7px;
+    padding: 2em 3em;
+    //border-radius: 7px;
+    box-shadow: 0 6px 2px 0px rgba(80, 77, 77, 0.5);
+    .error-mes {
+        display: none;
+        color: red;
+        font-style: italic;
+        text-align: end;
+        padding-right: 3em;
+        margin: -1em 0 1em 0;
+    }
+    .show {
+        display: block;
+    }
 }
 
 .title {
-    color: white;
+    //color: white;
     //padding: 10em 3em;
-    margin: 10em 2em;
+    margin: 10em 0 10em 2em;
     //width: 50%;
     flex-basis: 45%;
     h1 {
@@ -70,6 +91,7 @@ body {
     }
     p {
         font-size: 1.2rem;
+        margin-right: 3em;
     }
 }
 
@@ -78,12 +100,52 @@ body {
     background-color: $blue;
     padding: 1em;
     margin-bottom: 1.3em;
-    border-radius: 7px;
+    //border-radius: 7px;
+    //color: white;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 6px 2px 0px rgba(80, 77, 77, 0.5);
+    cursor: pointer;
 }
 
 input {
     display: block;
     margin: 1em;
+    width: 90%;
+    font-size: 1.4rem;
+    padding: 1em 1.3em;
+    //border-radius: 5px;
+    border: .5px solid $grayish-blue;
+}
+
+button {
+    background-color: $green;
+    padding: 1em;
+    width: 90%;
+    //border-radius: 5px;
+    color: white;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.form-col::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: .8em;
+}
+
+.form-footer {
+    color: $grayish-blue;
+    font-size: .9rem;
+    span {
+        color: $red;
+        font-weight: bold;
+        cursor: pointer;
+    }
 }
 
 .attribution {
