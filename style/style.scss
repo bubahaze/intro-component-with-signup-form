@@ -17,14 +17,12 @@ html {
 body {
     background-image: url("../images/bg-intro-desktop.png"), linear-gradient(rgb(248, 124, 110), salmon);
     background-size: cover;
-    //opacity: 70%;
     background-blend-mode: multiply;
     font-family: "Poppins", sans-serif;
     height: 100vh;
     width: 100vw;
-    //centering a div has never been easier! Look below:
+    //centering a div
     display: grid;
-    //OR JUSTIFY-CONTENT: CENTER AND ALIGN-CONTENT: CENTER INSTEAD OF PLACE-ITEMS
     place-items: center;
     overflow: hidden;
     color: white;
@@ -40,10 +38,8 @@ button {
 .main-container {
     display: flex;
     flex-direction: row;
-    //flex-wrap: wrap;
     width: 70%;
-    max-width: 90vw;
-    //border: 2px solid blue;
+    max-width: 900px;
     justify-content: center;
     align-items: center;
     margin-top: 5em;
@@ -53,19 +49,15 @@ button {
     display: flex;
     flex-direction: column;
     padding: 2em 1em;
-    //margin: auto;
     flex-basis: 45%;
 }
 
 .form-container {
-    //display: flex;
-    //flex-direction: column;
     background-color: white;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 2em 3em;
-    //border-radius: 7px;
     box-shadow: 0 6px 2px 0px rgba(80, 77, 77, 0.5);
     .error-mes {
         display: none;
@@ -81,10 +73,7 @@ button {
 }
 
 .title {
-    //color: white;
-    //padding: 10em 3em;
     margin: 10em 0 10em 2em;
-    //width: 50%;
     flex-basis: 45%;
     h1 {
         font-size: 3.7rem;
@@ -100,12 +89,15 @@ button {
     background-color: $blue;
     padding: 1em;
     margin-bottom: 1.3em;
-    //border-radius: 7px;
-    //color: white;
     text-align: center;
     font-weight: 500;
     box-shadow: 0 6px 2px 0px rgba(80, 77, 77, 0.5);
     cursor: pointer;
+}
+
+.top-offer:hover {
+    transition: .5s ease-in-out;
+    background: hsl(248, 94%, 69%);
 }
 
 input {
@@ -114,15 +106,20 @@ input {
     width: 90%;
     font-size: 1.4rem;
     padding: 1em 1.3em;
-    //border-radius: 5px;
     border: .5px solid $grayish-blue;
+}
+
+.red-addons {
+    border: 1px solid red;
+    background-image: url("../images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: 95% .7em;
 }
 
 button {
     background-color: $green;
     padding: 1em;
     width: 90%;
-    //border-radius: 5px;
     color: white;
     margin-bottom: 1em;
     text-transform: uppercase;
@@ -130,6 +127,11 @@ button {
     font-weight: 500;
     border: none;
     cursor: pointer;
+}
+
+button:hover {
+    transition: .5s ease-in-out;
+    background: hsl(113, 91%, 27%);
 }
 
 .form-col::placeholder {
@@ -149,5 +151,50 @@ button {
 }
 
 .attribution {
-    display: none;
+    font-size: 1.2rem;
+    a:hover {
+        color: $green;
+    }
+}
+
+@media (max-device-width: 925px) {
+    body {
+        overflow: scroll;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        margin: 0 auto;
+        text-align: center;
+        h1 {
+            font-size: 2.5rem;
+            @media (min-device-width: 550px) {
+                font-size: 3rem;
+            }
+        }
+        p {
+            margin: 2em 0;
+            @media (min-device-width: 550px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .left-container {
+        padding: 0;
+    }
+    .top-offer {
+        padding: 1em 4em;
+    }
+    input,
+    button {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .attribution {
+        padding: 3em;
+        text-align: center;
+    }
 }

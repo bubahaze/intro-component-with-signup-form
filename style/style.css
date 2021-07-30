@@ -40,7 +40,7 @@ button {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 70%;
-  max-width: 90vw;
+  max-width: 900px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -117,6 +117,12 @@ button {
   cursor: pointer;
 }
 
+.top-offer:hover {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background: #7966fa;
+}
+
 input {
   display: block;
   margin: 1em;
@@ -124,6 +130,13 @@ input {
   font-size: 1.4rem;
   padding: 1em 1.3em;
   border: 0.5px solid #b9b6d3;
+}
+
+.red-addons {
+  border: 1px solid red;
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 95% .7em;
 }
 
 button {
@@ -137,6 +150,12 @@ button {
   font-weight: 500;
   border: none;
   cursor: pointer;
+}
+
+button:hover {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background: #158406;
 }
 
 .form-col::-webkit-input-placeholder {
@@ -175,6 +194,69 @@ button {
 }
 
 .attribution {
-  display: none;
+  font-size: 1.2rem;
+}
+
+.attribution a:hover {
+  color: #38cc8c;
+}
+
+@media (max-device-width: 925px) {
+  body {
+    overflow: scroll;
+  }
+  .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .title {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-device-width: 925px) and (min-device-width: 550px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-device-width: 925px) {
+  .title p {
+    margin: 2em 0;
+  }
+}
+
+@media (max-device-width: 925px) and (min-device-width: 550px) {
+  .title p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-device-width: 925px) {
+  .left-container {
+    padding: 0;
+  }
+  .top-offer {
+    padding: 1em 4em;
+  }
+  input,
+  button {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .attribution {
+    padding: 3em;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
