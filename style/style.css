@@ -77,19 +77,6 @@ button {
           box-shadow: 0 6px 2px 0px rgba(80, 77, 77, 0.5);
 }
 
-.form-container .error-mes {
-  display: none;
-  color: red;
-  font-style: italic;
-  text-align: end;
-  padding-right: 3em;
-  margin: -1em 0 1em 0;
-}
-
-.form-container .show {
-  display: block;
-}
-
 .title {
   margin: 10em 0 10em 2em;
   -ms-flex-preferred-size: 45%;
@@ -123,6 +110,10 @@ button {
   background: #7966fa;
 }
 
+.field-container {
+  margin-bottom: 1.5em;
+}
+
 input {
   display: block;
   margin: 1em;
@@ -132,11 +123,27 @@ input {
   border: 0.5px solid #b9b6d3;
 }
 
-.red-addons {
+input.inputField:focus {
+  outline: 1px solid var(--blue);
+}
+
+input.error {
   border: 1px solid red;
   background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: 95% .7em;
+}
+
+.message {
+  color: red;
+  font-style: italic;
+  text-align: end;
+  padding-right: 3em;
+  margin: -1em 0 1em 0;
+}
+
+.message-hide {
+  display: none;
 }
 
 button {
@@ -194,7 +201,10 @@ button:hover {
 }
 
 .attribution {
-  font-size: 1.2rem;
+  position: absolute;
+  bottom: 2em;
+  left: 1em;
+  font-size: 1rem;
 }
 
 .attribution a:hover {
@@ -255,8 +265,7 @@ button:hover {
     width: 100%;
   }
   .attribution {
-    padding: 3em;
-    text-align: center;
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

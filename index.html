@@ -29,16 +29,29 @@
             </div>
 
             <div class="form-container">
-                <form id="reg-form" action="/" method="post">
-                    <input type="text" name="first-name" class="form-col" placeholder="First Name" autofocus>
-                    <p class="error-mes">First Name cannot be empty</p>
-                    <input type="text" id="last-name" class="form-col" placeholder="Last Name">
-                    <p class="error-mes">Last Name cannot be empty</p>
-                    <input type="text" id="email" class="form-col" placeholder="Email Address">
-                    <p class="error-mes">Looks like this is not an email</p>
-                    <input type="password" id="password" class="form-col" placeholder="Password">
-                    <p class="error-mes">Password cannot be empty</p>
-                    <button type="submit">Claim your free trial</button>
+                <form id="reg-form" action="#" method="post">
+                    <div class="field-container">
+                        <input type="text" name="first-name" class="form-col" placeholder="First Name" autofocus>
+                        <div class="message"></div>
+                        <!-- <p class="error-mes">First Name cannot be empty</p> -->
+                    </div>
+                    <div class="field-container">
+                        <input type="text" id="last-name" class="form-col" placeholder="Last Name">
+                        <div class="message"></div>
+                        <!-- <p class="error-mes">Last Name cannot be empty</p> -->
+                    </div>
+
+                    <div class="field-container">
+                        <input type="email" id="email" class="form-col" placeholder="Email Address">
+                        <div class="message"></div>
+                        <!-- <p class="error-mes">Looks like this is not an email</p> -->
+                    </div>
+
+                    <div class="field-container"> <input type="password" id="password" class="form-col" placeholder="Password">
+                        <div class="message"></div>
+                        <!-- <p class="error-mes">Password cannot be empty</p></div> -->
+                    </div>
+                    <button id="submit-btn" type="submit">Claim your free trial</button>
                 </form>
                 <div class="form-footer">
                     <p>By clicking the button, you are agreeing to our <span>Terms and Services</span> </p>
